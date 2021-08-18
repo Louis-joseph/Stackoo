@@ -1,0 +1,18 @@
+#form 
+{
+    background-image: url("../css/img/loginstackoo.png");
+    height: 100vh;
+    background-position: center;
+}
+
+.btn-primary 
+{
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+
+.btn-primary:hover
+{
+    background-color: #249e57;
+    border-color: #249e57;
+}

@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Annonces</a>
+                    <a class="nav-link active" aria-current="page" href="index.php">Annonces</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="liste-annonce.php">Mes annonces</a>

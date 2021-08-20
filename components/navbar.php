@@ -18,7 +18,7 @@
                     <a class="btn btn-primary" aria-current="page" href="ajout-form.php ">Ajouter une annonce</a>
                 </li>
             </ul>
-            <a href="" class="btn btn-warning">Déconnexion</a>
+            <a href="functions/deconnexion.php" class="btn btn-warning">Déconnexion</a>
         </div>
     </div>
 </nav>

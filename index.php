@@ -1,9 +1,13 @@
 <?php
+session_start();
+
+if (!isset($_SESSION["pseudo"])) {
+    header("Location: login.php");
+}
 require_once("components/header.php");
 require_once("components/navbar.php");
+
 ?>
-
-
 
 <div class="container">
     <h1>Trouvez la bonne affaire</h1>

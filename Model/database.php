@@ -4,6 +4,7 @@ $servername = "localhost";
 $dbname = "stackooapp";
 $username = "root";
 $password = "root";
+$secret_key = "d^7wgy^HQRqMn&78bA4@J";
 
 try {
     $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

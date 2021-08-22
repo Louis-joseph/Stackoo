@@ -1,6 +1,9 @@
 <?php
 require_once(dirname(__FILE__) . "/../Model/database.php");
 
+$passwordhasher = $_POST["password"] . "d^7wgy^HQRqMn&78bA4@J";
+$hasher = md5($passwordhasher);
+
 //Selectionner un utilisateur avec ce pseudo là et ce password
 
 $req = $db->prepare("SELECT * FROM user WHERE pseudo = :pseudo AND password = :password");
@@ -8,7 +11,7 @@ $req = $db->prepare("SELECT * FROM user WHERE pseudo = :pseudo AND password = :p
 //Renseigner les parametres
 
 $req->bindParam(":pseudo", $_POST["pseudo"]);
-$req->bindParam(":password", $_POST["password"]);
+$req->bindParam(":password", $hasher);
 
 //Executer la requete
 

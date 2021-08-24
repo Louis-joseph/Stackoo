@@ -17,6 +17,7 @@ require_once("functions/getUser.php");
     <div class="row">
 
         <?php
+        //Affichage en fonction du statut
         $req = $db->prepare("SELECT id, title, prix, image_url, author_id, location, DATE_FORMAT(created_at, '%d/%m/%Y à %H:%i') AS created_at_format FROM annonce WHERE statut = :statut ORDER BY created_at DESC");
         $req->bindParam(':statut', $config["STATUS"][0]);
         $req->execute();
@@ -28,7 +29,7 @@ require_once("functions/getUser.php");
                 <div class="card" style="width: 18rem;">
                     <img src="<?= $result["image_url"] ?>" class="card-img-top" alt="image_annonce">
                     <div class="card-body">
-                        <a href="fiche-annonce.php">
+                        <a href="fiche-annonce.php?id=<?= $result["id"] ?>">
                             <h5 class="card-title"><?= $result["title"] ?></h5>
                         </a>
                         <p class="card-text"><?= $result["prix"] ?>€</p>

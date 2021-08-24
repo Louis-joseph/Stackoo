@@ -1,22 +1,35 @@
 <?php
+session_start();
+
+if (!isset($_SESSION["pseudo"])) {
+    header("Location: login.php");
+}
+
 require_once("components/header.php");
 require_once("components/navbar.php");
+require_once('./Model/database.php');
+require_once("functions/getUser.php");
+
+//Affichage en fonction de l'identifiant
+$req = $db->prepare("SELECT id, title, prix, image_url, author_id, location, description, statut, DATE_FORMAT(created_at, '%d/%m/%Y à %H:%i') AS created_at_format FROM annonce WHERE id = :id");
+$req->bindParam(':id', $_GET["id"]);
+$req->execute();
+
+$result = $req->fetch(PDO::FETCH_ASSOC);
+$user = getUser($result["author_id"]);
 ?>
 
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <img src="https://picsum.photos/500" alt="">
+            <img src="<?= $result["image_url"] ?>" alt="">
         </div>
         <div class="col-md-6">
-            <h1>Alcool de contrebande</h1>
-            <p>Kofs - Parigny les Vaux - Le 22/08/2020 à 22h55</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima aperiam iste numquam ratione dignissimos id recusandae, ex consectetur facilis, non possimus? Non odit ad, itaque cupiditate nostrum tenetur suscipit architecto!
-                Quasi in explicabo voluptatibus, consequatur dicta consequuntur distinctio optio quaerat iure, ab numquam dolorum laborum minima quia similique repellat repudiandae nesciunt, velit fugiat sint quisquam. Atque non temporibus aliquid deserunt.
-                Illo veritatis modi, eum alias recusandae, necessitatibus minus possimus assumenda doloremque iure qui corrupti doloribus porro aut. Sed magnam repellat dicta aspernatur, quidem fuga nobis tenetur deserunt maiores, odit quisquam.
-                Labore dolorum consequuntur repellendus qui temporibus, debitis dolorem dolores soluta unde culpa enim cumque molestias laboriosam reprehenderit ad inventore, repudiandae, eius minima perspiciatis nesciunt. Officiis minima odit adipisci itaque sit.
-                Vero, placeat nobis? Exercitationem delectus, minus reiciendis aut nam iure culpa ut nihil quidem accusamus quasi necessitatibus odit dolor dolorem dolores et voluptatem incidunt omnis libero pariatur. Tenetur, dicta veniam.
-                Consequuntur excepturi culpa perspiciatis amet molestias, quaerat, nulla id soluta neque enim maiores non esse iure quos incidunt, aliquid consectetur odio accusantium fuga ut? Voluptatem necessitatibus suscipit possimus totam laborum.</p>
+            <h2><?= $result["title"] ?><span class="badge bg-light text-dark"><?= $result["statut"] ?></span></h2>
+            <p><?= $user["pseudo"] ?> - <?= $result["location"] ?> - <?= $result["created_at_format"] ?> </p>
+            <p>
+                <?= $result["description"] ?>
+            </p>
 
         </div>
     </div>

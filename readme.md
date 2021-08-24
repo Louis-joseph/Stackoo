@@ -8,6 +8,6 @@ Vous chercher à déposer des petites annonces de toute sorte où trouvez ce que
 
 View: contient mes images, affichage de la page
 
-Configs: contient des fichiers de configuration
+Model: contient des fichiers de configuration
 
 Components: contient la logique du code, menu de navigation/header/footer etc...

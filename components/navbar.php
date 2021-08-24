@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
-    <div class="container-fluid">
+    <div class="container">
         <a class="navbar-brand" href="#">
             Logo
         </a>

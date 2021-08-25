@@ -6,8 +6,17 @@ Vous chercher à déposer des petites annonces de toute sorte où trouvez ce que
 
 ## Environnement de développement
 
-View: contient mes images, affichage de la page
+### Design pattern
 
-Model: contient des fichiers de configuration
+- View: contient mes images, affichage de la page
 
-Components: contient la logique du code, menu de navigation/header/footer etc...
+- Model: contient des fichiers de configuration
+
+- Components: menu de navigation/header/footer etc...
+
+### Plateforme d'annonces
+
+- Mise en place d'un système d'authentification sécuriser en utilisant le cryptage des MDP
+
+- Mise en place d'un système permettant de gérer les droits et accès des utilisateurs en
+fonction de leur statut.

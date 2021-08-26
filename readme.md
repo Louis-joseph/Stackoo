@@ -8,15 +8,20 @@ Vous chercher à déposer des petites annonces de toute sorte où trouvez ce que
 
 ### Design pattern
 
-- View: contient mes images, affichage de la page
+```bash
+📂 View:  contient mes images, affichage de la page
 
-- Model: contient des fichiers de configuration
+📂 Model:  contient des fichiers de configuration
 
-- Components: menu de navigation/header/footer etc...
+📂 Components:  menu de navigation/header/footer etc...
 
+📂 Functions: fonction en php
+```
 ### Plateforme d'annonces
 
-- Mise en place d'un système d'authentification sécuriser en utilisant le cryptage des MDP
+```bash
+Mise en place d'un système d'authentification sécuriser en utilisant le cryptage des MDP
 
-- Mise en place d'un système permettant de gérer les droits et accès des utilisateurs en
+Mise en place d'un système permettant de gérer les droits et accès des utilisateurs en
 fonction de leur statut.
+```

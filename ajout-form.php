@@ -8,7 +8,7 @@ require_once("components/navbar.php");
         <div class="col-md-8">
             <h1>Ajouter une annonce</h1>
 
-            <form action="" class="form-group">
+            <form action="functions/addAnnonce.php" method="POST" class="form-group">
                 <div class="form-group">
                     <input type="text" name="title" class="form-control" placeholder="Entrez vôtre titre">
                 </div>
@@ -19,6 +19,12 @@ require_once("components/navbar.php");
                 <br>
                 <div class="form-group">
                     <textarea name="description" class="form-control" placeholder="Entrez vôtre description"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="date" name="date" class="form-control" placeholder="Entrez une date">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="prix" class="form-control" placeholder="Entrez un prix">
                 </div>
                 <div class="form-group">
                     <select name="location" id="" class="form-control">

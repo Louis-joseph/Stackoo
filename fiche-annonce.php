@@ -34,7 +34,7 @@ $user = getUser($result["author_id"]);
             <!-- S'il s'agit du proprio de l'annonce/Afficher les boutons d'edit -->
             <?php if ($_SESSION["id"] === $result["author_id"] && $result["statut"] !== $config["STATUTS"][2]) : ?>
                 <a href="functions/deleteAnnonce.php?annonce_id=<?= $result["id"] ?>" class=" btn btn-danger">Supprimer</a>
-                <a href="" class="btn btn-primary">Archiver</a>
+                <a href="modif-form.php?annonce_id=<?= $result["id"] ?>" class="btn btn-primary">Modifier</a>
             <?php endif ?>
             <!-- Si l'article est archiver on va pouvoir le supprimer -->
             <?php if ($_SESSION["id"] === $result["author_id"] && $result["statut"] === $config["STATUTS"][2]) : ?>

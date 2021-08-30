@@ -10,15 +10,15 @@ require_once("components/navbar.php");
 
             <form action="functions/addAnnonce.php" method="POST" class="form-group">
                 <div class="form-group">
-                    <input type="text" name="title" class="form-control" placeholder="Entrez vôtre titre">
+                    <input type="text" name="title" class="form-control" placeholder="Entrez votre titre">
                 </div>
                 <br>
                 <div class="form-group">
-                    <input type="text" name="image" class="form-control" placeholder="Entrez vôtre image">
+                    <input type="text" name="image" class="form-control" placeholder="Entrez votre image">
                 </div>
                 <br>
                 <div class="form-group">
-                    <textarea name="description" class="form-control" placeholder="Entrez vôtre description"></textarea>
+                    <textarea name="description" class="form-control" placeholder="Entrez votre description"></textarea>
                 </div>
                 <div class="form-group">
                     <input type="date" name="date" class="form-control" placeholder="Entrez une date">

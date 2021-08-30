@@ -24,4 +24,6 @@ Mise en place d'un système d'authentification sécuriser en utilisant le crypta
 
 Mise en place d'un système permettant de gérer les droits et accès des utilisateurs en
 fonction de leur statut.
+
+Mise en place d'une session tout au long de votre navigation
 ```

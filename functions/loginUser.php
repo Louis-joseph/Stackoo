@@ -24,5 +24,5 @@ if (!$result) {
     $_SESSION["pseudo"] = $result["pseudo"];
     $_SESSION["id"] = $result["id"];
     $_SESSION["role"] = $result["role"];
-    header("location: ../index.php");
+    header("location: ../main.php");
 }

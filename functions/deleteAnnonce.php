@@ -8,5 +8,5 @@ $req = $db->prepare("DELETE FROM annonce WHERE id = :annonce_id ");
 $req->bindParam(":annonce_id", $_GET["annonce_id"]);
 $req->execute();
 
-header("Location: ../index.php");
+header("Location: ../main.php");
 exit();

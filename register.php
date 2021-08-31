@@ -27,10 +27,10 @@ require_once("components/header.php");
                 <div class="form-group">
                     <input type="password" name="confirmPassword" class="form-control" placeholder="Confirmez votre mot de passe">
                 </div>
-                <div class="form-group form-check">
+                <!-- <div class="form-group form-check">
                     <input type="checkbox" name="role" id="role" class="form-check-input">
                     <label for="role">Je souhaite devenir un Stackoo Helper!</label>
-                </div>
+                </div> -->
                 <br>
                 <div class="form-group">
                     <a href="login.php" class="btn btn-warning">Connexion</a>

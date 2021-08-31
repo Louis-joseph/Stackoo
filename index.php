@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION["pseudo"])) {
-    header("Location: login.php");
+    header("Location: main.php");
 }
 require_once("components/header.php");
 require_once("components/navbar.php");

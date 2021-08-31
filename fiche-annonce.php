@@ -45,12 +45,12 @@ $user = getUser($result["author_id"]);
 
 
             <?php if ($_SESSION["role"] === $config["ROLES"][1] && $result["statut"] === $config["STATUTS"][0]) : ?>
-                <a href="">Particper</a>
+                <a href="">Modifier</a>
             <?php endif ?>
 
             <?php if ($_SESSION["role"] === $config["ROLES"][1] && $result["statut"] === $config["STATUTS"][1]) : ?>
                 <?php if ($_SESSION["id"] === $result["helper_id"]) : ?>
-                    <a href="" class="btn btn-danger">Annuler</a>
+                    <a href="" class="btn btn-danger">Supprimer</a>
                 <?php else : ?>
 
                 <?php endif ?>
